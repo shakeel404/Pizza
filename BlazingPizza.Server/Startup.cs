@@ -40,16 +40,6 @@ namespace BlazingPizza.Server
                     options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 })
                 .AddCookie()
-                //.AddTwitter(twitterOptions =>
-                //{
-                //    twitterOptions.ConsumerKey = Configuration["Authentication:Twitter:ConsumerKey"];
-                //    twitterOptions.ConsumerSecret = Configuration["Authentication:Twitter:ConsumerSecret"];
-                //    twitterOptions.Events.OnRemoteFailure = (context) =>
-                //    {
-                //        context.HandleResponse();
-                //        return context.Response.WriteAsync("<script>window.close();</script>");
-                //    };
-                //})
                 .AddGoogle(googleOptions=> 
                 {
                     googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
